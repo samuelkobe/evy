@@ -1,0 +1,205 @@
+// ----- REFINERY TUNEUPS ----- //
+#body_content_title
+	display: none
+	visibility: hidden
+
+// ----- HEADER ----- //
+
+.zebra
+	float: left
+	font-family: zebra
+	font-size: 24px
+	padding: 18px 36px
+	color: $light-gray
+
+.brand
+	text-transform: uppercase
+	font-size: 21px
+	&:link
+		padding: 15px
+	&:hover
+		background: $theme-color
+		color: #fff
+		text-shadow: none
+
+.navbar .nav > li.selected
+	a
+		background: $light-gray
+		color: #fff
+		text-shadow: none
+	a:hover
+		color: $theme-color
+
+.navbar .nav > li
+	font-family: $font-family
+	text-transform: uppercase
+	font-size: 21px
+	&:hover
+		background: $theme-color
+		a 
+			color: #fff
+			&:hover
+				text-shadow: none
+	a 
+		padding: 15px
+
+.line-top
+	background: #676767
+	height: .4375em
+	
+.navbar-inner
+	background: none
+	border:  none
+	box-shadow: none
+	-moz-box-shadow: none
+	-webkit-box-shadow: none
+	
+.nav-padding
+	padding-top: 2.08333em
+	
+// QUOTE //
+
+.quote
+	text-align: center
+	font-family: $font-family
+	border-top: 1px solid #eee
+	border-bottom: 1px solid #eee
+	padding: 30px 0
+	h1
+		text-transform: uppercase
+	h2
+		font-size: 1.4em
+		font-weight: 300
+	h3
+		font-size: 1.2em
+		font-weight: 300
+		
+.quote-simple
+	margin: 0 auto
+	text-align: left
+	font-family: $font-family
+	border-top: 1px solid #eee
+	border-bottom: 1px solid #eee
+	padding: 30px
+	h1
+		font-size: 2.5em
+		font-weight: 300
+		text-transform: uppercase
+		padding-bottom: 10px
+	h2
+		font-size: 2em
+		font-weight: 300
+		padding-bottom: 5px
+	h3
+		font-size: 1.5em
+		font-weight: 300
+		padding-bottom: 5px
+// CAROUSEL //
+
+#myCarousel
+	margin: 30px 0
+		
+// SERVICES //
+
+.services
+	border-top: 1px solid #eee
+	border-bottom: 1px solid #eee
+	padding: 30px 0
+
+.service
+	text-align: center
+	&:hover, &:hover p
+		background: $theme-color
+		color: #fff
+	h3, img, p
+		padding: 10px 0
+
+// ----- RECENTS ----- //
+.recent-works
+	border-bottom: 1px solid #eee
+	padding: 30px 0 50px 0
+	
+.recent-work-wrapper
+	position: relative
+	&:hover .recent-work-info
+		display: block
+		visibility: visible
+		
+.recent-work-info
+	position: absolute
+	width: 100%
+	top: 0
+	bottom: 0
+	background: $theme-color
+	display: none
+	visibility: hidden
+	
+.recent-work-info .recent-work-inner-wrapper
+	padding: 15px 25px
+	h3
+		color: #fff
+		line-height: 1
+	p
+		color: #fff
+		
+	h4
+		font-size: .65em
+		font-family: arial
+		text-transform:  uppercase
+	
+.modal-box
+	position: absolute
+	right: 37px
+	bottom: 0
+	width: 35px
+	height: 35px
+	background: url('sprite.png') no-repeat scroll 12px -50px #333	
+	
+.link-recent-work
+	position: absolute
+	right: 0
+	bottom: 0
+	width: 35px
+	height: 35px	
+	background: url(sprite.png) no-repeat scroll 11px 13px #333
+	
+	
+// ----- BOTTOM ----- //
+
+#bottom
+	position: relative
+	height: 400px
+	background: $light-gray
+	h4
+		color: #fff
+		padding-bottom: 20px
+	p
+		font-size: .8em
+		color: $lighter-gray
+	a
+		color: $theme-color
+		&:hover
+			color: $theme-color
+			border-bottom: 1px dashed $theme-color
+			text-decoration: none
+
+footer
+	position: relative
+	height: auto
+	background: $light-gray
+	p
+		background: $gray
+		font-size: .8em
+		color: $lighter-gray
+		height: 15px
+		padding: 15px
+		
+.footer-content
+	padding-top: 50px
+
+.footer-bottom
+	position: relative
+	bottom: 0
+
+.inner-footer-bottom
+	position: relative

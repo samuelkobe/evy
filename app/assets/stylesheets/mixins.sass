@@ -1,0 +1,36 @@
+@import "variables.sass"
+
+@mixin box-sizing($inset)
+	box-sizing: $inset
+	-webkit-box-sizing: $inset
+	-moz-box-sizing: $inset
+	-o-box-sizing: $inset
+
+@mixin size($columns, $grid)
+	position:relative
+	float: left
+	width: percentage((100/$grid * $columns)/100)
+	border-left: solid 0.625em transparent
+	border-right: solid 0.625em transparent
+	@include box-sizing(border-box)
+
+
+@mixin trans($type:all, $time:500ms, $speed:cubic-bezier(0.420, 0.000, 0.580, 1.000))
+	-webkit-transition: $type $time $speed
+	-moz-transition: $type $time $speed
+	-ms-transition: $type $time $speed
+	-o-transition: $type $time $speed
+	transition: $type $time $speed
+	-webkit-transition-timing-function: $speed
+	-moz-transition-timing-function:$speed
+	-ms-transition-timing-function:$speed
+	-o-transition-timing-function:$speed
+	transition-timing-function: $speed
+
+@mixin px-convert($dec, $size, $base:$font-size)
+	$new-size: $size/$base
+	#{$dec}: #{$new-size}em
+
+@mixin px-convert-border($param1, $size, $param2, $param3, $base:$static-base-font-size)
+	$new-size: $size/$base
+	#{$param1}: #{$new-size}em #{$param2} #{$param3}

@@ -1,0 +1,67 @@
+/* =============================================================================
+   Non-Semantic Helper Classes
+   ========================================================================== */
+
+.ir
+	display: block
+	border: 0
+	text-indent: -999em
+	overflow: hidden
+	background-color: transparent
+	background-repeat: no-repeat
+	text-align: left
+	direction: ltr
+	*line-height: 0
+
+.ir br
+	display: none
+
+.hidden 
+	display: none !important
+	visibility: hidden
+
+.visuallyhidden
+	border: 0
+	clip: rect(0 0 0 0)
+	height: 1px
+	margin: -1px
+	overflow: hidden
+	padding: 0
+	position: absolute
+	width: 1px
+
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus
+	clip: auto
+	height: auto
+	margin: 0
+	overflow: visible
+	position: static
+	width: auto
+
+.invisible
+	visibility: hidden
+
+.group:after
+	content: ""
+	display: table
+	clear: both
+
+.txtc
+	text-align: center
+
+.txtl
+	text-align: left
+
+.txtr
+	text-align: right
+
+.txtc:before, .txtl:before, .txtr:before
+	content: ''
+	display: inline-block
+	height: 100%
+	vertical-align: middle
+	margin-right: -0.25em
+
+.centered
+	display: inline-block
+	vertical-align: middle

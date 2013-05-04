@@ -1,63 +1,22 @@
 <div class="recent-works">
 	<h2>Recent Work</h2>
 	<div class="row-fluid">
+		<% @recent_work.each do |recent_work| %>
 		<div class="span3 recent-work">
 			<div class="recent-work-wrapper">
 				<div class="recent-work-info animated fadeIn">
 					<div class="recent-work-inner-wrapper">
-						<h3>Faux</h3>
-						<h4>Faux</h4>
-						<p>Lorem ibsum</p>
+						<h3><%= recent_work.title %></h3>
+						<h4><%= recent_work.service_type %></h4>
+						<p><%=raw recent_work.description -%></p>
 					</div>
-					<%= link_to "", root_url, :class => "modal-box" %>
-					<%= link_to "", root_url, :class => "link-recent-work" %>					
+					<%#= link_to "", refinery.root_url, :class => "modal-box" %>
+					<%= link_to "", refinery.works_work_path(recent_work), :class => "link-recent-work" %>					
 				</div>
-				<%= image_tag 'http://demo.brankic.net/bigbangwp/wp-content/uploads/2012/07/portfolio-item-31.jpg' %>
-				<h3>Faux</h3>
+				<%= image_tag(recent_work.photo_1.url) %>
+				<h3><%= recent_work.title %></h3>
 			</div>
 		</div>
-		<div class="span3 recent-work">
-			<div class="recent-work-wrapper">
-				<div class="recent-work-info animated fadeIn">
-					<div class="recent-work-inner-wrapper">
-						<h3>Faux</h3>
-						<h4>Faux</h4>
-						<p>Lorem ibsum</p>
-					</div>
-					<%= link_to "", root_url, :class => "modal-box" %>
-					<%= link_to "", root_url, :class => "link-recent-work" %>					
-				</div>
-				<%= image_tag 'http://demo.brankic.net/bigbangwp/wp-content/uploads/2012/07/portfolio-item-31.jpg' %>
-				<h3>Trompel'&#156;il</h3>
-			</div>
-		</div>
-		<div class="span3 recent-work">
-			<div class="recent-work-wrapper">
-				<div class="recent-work-info animated fadeIn">
-					<div class="recent-work-inner-wrapper">
-						<h3>Faux</h3>
-						<h4>Faux</h4>
-						<p>Lorem ibsum</p>
-					</div>
-					<%= link_to "", root_url, :class => "modal-box" %>
-					<%= link_to "", root_url, :class => "link-recent-work" %>					
-				</div>
-				<%= image_tag 'http://demo.brankic.net/bigbangwp/wp-content/uploads/2012/07/portfolio-item-31.jpg' %>
-				<h3>Trompel'&#156;il</h3>
-			</div>		</div>
-		<div class="span3 recent-work">
-			<div class="recent-work-wrapper">
-				<div class="recent-work-info animated fadeIn">
-					<div class="recent-work-inner-wrapper">
-						<h3>Faux</h3>
-						<h4>Faux</h4>
-						<p>Lorem ibsum</p>
-					</div>
-					<%= link_to "", root_url, :class => "modal-box" %>
-					<%= link_to "", root_url, :class => "link-recent-work" %>					
-				</div>
-				<%= image_tag 'http://demo.brankic.net/bigbangwp/wp-content/uploads/2012/07/portfolio-item-31.jpg' %>
-				<h3>Trompel'&#156;il</h3>
-			</div>		</div>
+	<% end %>
 	</div>
 </div>

@@ -1,0 +1,19 @@
+<% content_for :body do %>
+<ul id="filters">
+	<li class="sorter"><a href="#" data-filter="*">Show All</a></li>
+	<li class="sorter"><a href="#" data-filter=".Faux">Faux</a></li>
+	<li class="sorter"><a href="#" data-filter=".Trom">Trompel'oeil</a></li>
+	<li class="sorter"><a href="#" data-filter=".Fine">Fine Art</a></li>
+</ul>
+
+<div id="container">
+  	<% @works.each do |work| %>
+ 			<%= content_tag :div, :class => truncate(work.service_type, :length => 4,  :omission => "") + " works_box" do %>
+			<div class="work-image"><%= link_to image_tag(work.photo_1.url), refinery.works_work_path(work) %></div>
+			<h3 class="title-work"><%= work.title %></h3>
+  		<% end %>
+  	<% end %>
+</div>
+<% end %>
+
+<%= render '/refinery/content_page' %>

@@ -1,0 +1,39 @@
+es:
+  refinery:
+    plugins:
+      works:
+        title: Works
+#        article: masculino/femenino
+    works:
+      admin:
+        works:
+          actions:
+            create_new: Crear nuevo work
+            reorder: Reordenar works
+            reorder_done: Reordenación de works completada
+          records:
+            title: Works
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay works todavía. Pulsa en "Crear nuevo Work" para crear tu primer work.
+          work:
+            view_live_html: Ver este work como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este work
+            delete: Borrar este work para siempre
+      works:
+        show:
+          other: Otros works
+  activerecord:
+    attributes:
+      'refinery/works/work':
+        title: Title
+        service_id: Service
+        service_type: Service Type
+        description: Description
+        photo_1: Photo 1
+        photo_2: Photo 2
+        photo_3: Photo 3
+        photo_4: Photo 4
+        photo_5: Photo 5
+        photo_6: Photo 6
+        photo_7: Photo 7
+        photo_8: Photo 8

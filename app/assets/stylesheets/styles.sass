@@ -115,12 +115,20 @@
 		padding: 10px 0
 
 // ----- RECENTS ----- //
+.recent-work
+	height: 191px
+
 .recent-works
 	border-bottom: 1px solid #eee
 	padding: 30px 0 50px 0
 	
 .recent-work-wrapper
 	position: relative
+	overflow: hidden
+	img
+		min-width: 419px
+		display: block
+		height: 100%
 	&:hover .recent-work-info
 		display: block
 		visibility: visible
@@ -193,7 +201,9 @@ footer
 		color: $lighter-gray
 		height: 15px
 		padding: 15px
-		
+
+
+// WORKS INDEX //
 .footer-content
 	padding-top: 50px
 
@@ -203,3 +213,70 @@ footer
 
 .inner-footer-bottom
 	position: relative
+	
+.works_box
+	position: relative
+	height: 314px
+	background: #ccc
+	width: 314px
+	margin: 3px
+	overflow: hidden
+
+#filters
+	height: 35px
+	border-bottom: #eee solid 1px
+	margin-left: 0px
+	
+#filters li.sorter
+	display:inline
+	list-style-type: none
+
+#filters li a
+	font-size: 16px
+	color: #333
+	line-height: 16px
+	text-transform: uppercase
+	text-decoration: none
+	float: left
+	margin: 0 5px
+	padding: 3px 5px
+	-moz-border-radius: 2px
+	-webkit-border-radius: 2px
+	border-radius: 2px
+	&:hover
+		background: #333
+		color: #fff
+
+.work-image
+	height: 264px
+	background: red
+
+.title-work
+	height: 50px
+	background: #fff
+
+.work-image
+	position: relative
+	overflow: hidden
+
+.work-image img
+	min-width: 419px
+	display: block
+	min-height: 100%
+
+// WORKS SHOW //
+ 
+.work-title-wrap
+	border-bottom: #eee solid 1px
+	padding-bottom: 24px
+	margin-bottom: 24px
+
+.work-title
+	height: 35px
+
+.work-title-span
+	color: #ccc
+
+.work-description
+	font-size: 13px
+	line-height: 26px

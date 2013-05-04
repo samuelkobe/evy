@@ -1,0 +1,69 @@
+<div class="container">
+	<div class="row-fluid work-title-wrap">
+		<div>
+			<h1 class="span12 work-title"><%= @work.title %></h1>
+		</div>
+	</div>
+<div class="row-fluid">
+	<div class="span4">
+		<h2>Process</h2>
+		<p class="work-description">
+			<%= raw @work.description -%>
+		</p>
+	</div>
+	<div class="span8">
+		
+		<div id="myCarousel" class="carousel slide">		
+			<ol class="carousel-indicators">			
+				<% (1..8).each do |i|
+					if eval("@work.photo_#{i}").nil?
+					else
+						if i == 1 %>
+							<%= tag(:li, :class => "active", :data => {:target => '#myCarousel', :slide_to => i-1}) %>
+						<% else %>
+							<%= tag(:li, :data => {:target => '#myCarousel', :slide_to => i-1}) %>
+						<% end %>
+					<% end %>
+				<% end %>
+			</ol>
+			
+			<!-- Carousel items -->
+			<div class="carousel-inner">
+				<% (1..8).each do |i|
+					if eval("@work.photo_#{i}").nil?
+					else
+						if i == 1 %>
+					   		<%= content_tag :div, :class => "active item" do %>
+					 			<%= image_tag eval("@work.photo_#{i}").url %>
+	  						<% end %>
+						<% else %>
+							<%= content_tag :div, :class => "item" do %>
+					 			<%= image_tag eval("@work.photo_#{i}").url %>
+	  						<% end %>
+						<% end %>
+					<% end %>
+				<% end %>
+			</div>
+			<!-- Carousel nav -->
+		  	<a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+		  	<a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+		</div>
+	</div>
+</div>  
+
+
+<!-- <div class="row-fluid">
+  <div class="span4">
+	<h2>More Works</h2>
+    <ul id="works">
+      <% @works.each do |work| %>
+        <li>
+          <%= link_to work.title, refinery.works_work_path(work) %>
+        </li>
+      <% end %>
+    </ul>
+ </div>
+</div>
+-->
+
+<%= render '/refinery/content_page' %>

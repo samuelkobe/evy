@@ -87,30 +87,6 @@ ActiveRecord::Schema.define(:version => 20130406235903) do
   add_index "refinery_pages", ["parent_id"], :name => "index_refinery_pages_on_parent_id"
   add_index "refinery_pages", ["rgt"], :name => "index_refinery_pages_on_rgt"
 
-  create_table "refinery_portfolios", :force => true do |t|
-    t.string   "title"
-    t.string   "type"
-    t.text     "description"
-    t.integer  "photo_1_id"
-    t.integer  "photo_2_id"
-    t.integer  "photo_3_id"
-    t.integer  "photo_4_id"
-    t.integer  "photo_5_id"
-    t.integer  "photo_6_id"
-    t.integer  "photo_7_id"
-    t.integer  "photo_8_id"
-    t.integer  "position"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
-  end
-
-  create_table "refinery_professions", :force => true do |t|
-    t.string   "name"
-    t.integer  "position"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
   create_table "refinery_resources", :force => true do |t|
     t.string   "file_mime_type"
     t.string   "file_name"

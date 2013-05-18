@@ -1,9 +1,12 @@
 <% content_for :body do %>
   <ul id="services">
     <% @services.each do |service| %>
-      <li>
-        <%= link_to service.name, refinery.services_service_path(service) %>
-      </li>
+	<li class="services-list">
+      <h1>
+        <%=raw service.name -%>
+      </h2>
+	  <p><%=raw service.description -%></p>
+    </li>
     <% end %>
   </ul>
 <% end %>

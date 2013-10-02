@@ -7,7 +7,7 @@
 	-o-box-sizing: $inset
 
 @mixin size($columns, $grid)
-	position:relative
+	position: 	relative
 	float: left
 	width: percentage((100/$grid * $columns)/100)
 	border-left: solid 0.625em transparent
@@ -22,9 +22,9 @@
 	-o-transition: $type $time $speed
 	transition: $type $time $speed
 	-webkit-transition-timing-function: $speed
-	-moz-transition-timing-function:$speed
-	-ms-transition-timing-function:$speed
-	-o-transition-timing-function:$speed
+	-moz-transition-timing-function: $speed
+	-ms-transition-timing-function :$speed
+	-o-transition-timing-function: $speed
 	transition-timing-function: $speed
 
 @mixin px-convert($dec, $size, $base:$font-size)

@@ -2,7 +2,7 @@
 	<h2>Recent Work</h2>
 	<div class="row-fluid">
 		<% @recent_work.each do |recent_work| %>
-		<div class="span3 recent-work">
+		<div class="span3 recent-work" style="margin-bottom: 50px;">
 			<div class="recent-work-wrapper">
 				<div class="recent-work-info animated fadeIn">
 					<div class="recent-work-inner-wrapper">
@@ -13,7 +13,9 @@
 					<%#= link_to "", refinery.root_url, :class => "modal-box" %>
 					<%= link_to "", refinery.works_work_path(recent_work), :class => "link-recent-work" %>					
 				</div>
+				<div style="height: 200px; overflow:hidden;">
 				<%= image_tag(recent_work.photo_1.url) %>
+				</div>
 				<h3><%= recent_work.title %></h3>
 			</div>
 		</div>

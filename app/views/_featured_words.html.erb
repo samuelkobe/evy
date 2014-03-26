@@ -1,10 +1,11 @@
 <% @featured_work.each do |featured_work| %>
 <div id="myCarousel" class="carousel slide">		
 	<ol class="carousel-indicators">			
-		<% (1..8).each do |i|
-			if eval("featured_work.photo_#{i}").nil?
-			else
-				if i == 1 %>
+		<% (1..8).each do |i| %>
+			<% if eval("featured_work.photo_8").nil? %>
+			bob
+			<% else %>
+				<% if i == 1 %>
 					<%= tag(:li, :class => "active", :data => {:target => '#myCarousel', :slide_to => i-1}) %>
 				<% else %>
 					<%= tag(:li, :data => {:target => '#myCarousel', :slide_to => i-1}) %>
@@ -15,22 +16,25 @@
 	
 	<!-- Carousel items -->
 	<div class="carousel-inner">
-		<% (1..8).each do |i|
-			if eval("featured_work.photo_#{i}").nil?
-			else
-				if i == 1 %>
+		<% (1..8).each do |i| %>
+			<% if eval("featured_work.photo_8").nil? %>
+			steve
+			<% else %>
+				<% if i == 1 %>
 			   		<%= content_tag :div, :class => "active item" do %>
 			 			<%= image_tag eval("featured_work.photo_#{i}").url %>
 					<% end %>
 				<% else %>
 					<%= content_tag :div, :class => "item" do %>
-			 			<%= image_tag eval("featured_work.photo_#{i}").url %>
+			 			<%= image_tag eval("featured_work.photo_8").url %>
 					<% end %>
 				<% end %>
 			<% end %>
 		<% end %>
 	</div>
-	<!-- Carousel nav -->
-  	<a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-  	<a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
 </div>
+<% end %>
+
+<!-- Carousel nav -->
+<a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+<a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
